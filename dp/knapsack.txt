@@ -1,0 +1,26 @@
+This is a dynamic programming problem of knapsack 01
+A knapsack is given which can only hold items of uptill a certain weight 'W'
+Certan 'n' number of items are given each with its separate weight value 'wt' and with its value 'val'
+An item can either be picked or not picked. No partial picking allowed.
+The goal is to find out the maximum profit that can be made by picking the items such that the knapsack has max profit.
+The max weight the knapsack holds cannot be exceeded.
+
+Here we can use recursive dp with memoisation or tabulation with iteration. 
+
+The values are stored in a table of size n+1 x W+1 
+
+if n = 3 and W = 6
+The table: 
+
+0 0 0 0 0 0 0
+0 
+0
+0
+0   	    *
+
+The answer will be found at the last index of this 2d array
+
+The rows are the weights available to us of items 
+The columns are max weights of knapsack
+Since the last column would be W thats why we return it
+The values stored in the array would be of max profits that can be made within that max weight with the given weights
